@@ -1,0 +1,14 @@
+{
+  "name": "meadowlark",
+  "version": "1.0.0",
+  "description": "An object to learn Node.js",
+  "main": "meadowlark.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mohamad Rashid",
+  "license": "ISC",
+  "dependencies": {
+    "express-handlebars": "^3.0.0"
+  }
+}
