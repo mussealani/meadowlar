@@ -1,3 +1,4 @@
+var fortune = require('./lib/fortune.js');
 var express = require('express');
 var app = express();
 
@@ -22,20 +23,10 @@ app.get('/', function (req, res) {
 });
 
 
-// set foutune cookie
-var fortunes = [
-        "Conquer you fears or they will conquer you.",
-        "Rivers need springs.",
-        "Do not fear what you don't know.",
-        "You will have a pleasant surprise.",
-        "Whenever possible, keep it simple",
-];
-
 
 // route about page
 app.get('/about', function (req, res) {
-  var randomFortuene = fortunes[Math.floor(Math.random() * fortunes.length)];
-  res.render('about', { fortune: randomFortuene });
+  res.render('about', { fortune: fortune.getFortune() });
 });
 
 
